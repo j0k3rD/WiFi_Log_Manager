@@ -39,9 +39,9 @@ class Functions():
                 df = df.loc[df[cs.DF_USUARIO] == result.group()] #result.group, devuelve el matcheo.
                 return True, df
             else:
-                return False, f"{cs.NAME_NOT_FOUND} {user_id}"
+                return False, f"\033[1;31m{cs.NAME_NOT_FOUND} {user_id}\033[0;0m"
         else:
-            return False, f"{cs.INVALID_ID_FORMAT} {user_id}"
+            return False, f"\033[1;33m{cs.INVALID_ID_FORMAT} {user_id}\033[0;0m"
 
     def show_user(self, user_id, df):
         """Verifica el user ID y busca las sesiones en un DataFrame.
@@ -113,7 +113,7 @@ class Functions():
             df = df.loc[(df[cs.DF_INICIO] >= date_min) & (df[cs.DF_FIN] <= date_max)]
             return True, df.reset_index(drop = True)
         else:
-            return False, f"{cs.INVALID_DATE_FORMAT} {date_min} or {date_max}"
+            return False, f"\033[1;33m{cs.INVALID_DATE_FORMAT} {date_min} or {date_max}\033[0;0m"
 
     def user_sessionTime(self, user_id, df):
         """Verifica el user ID y muestra el tiempo total de sesiones en el DataFrame.
@@ -156,9 +156,9 @@ class Functions():
                 return True, df.reset_index(drop = True)
                 
             else:
-                return False, f"{cs.MAC_NOT_FOUND} {mac}"
+                return False, f"\033[1;31m{cs.MAC_NOT_FOUND} {mac}\033[0;0m"
         else:
-            return False, f"{cs.INVALID_MAC_FORMAT} {mac}"
+            return False, f"\033[1;33m{cs.INVALID_MAC_FORMAT} {mac}\033[0;0m"
 
     def users_macs(self, user_id, df):
         """Verifica la cantidad de MACs que utiliza un usuario en el DataFrame.
@@ -202,9 +202,9 @@ class Functions():
             r_date = self.__transformDate(date_min = date_min,  date_max = date_max)
 
         if (r_date == False and not date_max_null):
-            return False, f"{cs.INVALID_DATE_FORMAT} {date_min} y {date_max}"
+            return False, f"\033[1;33m{cs.INVALID_DATE_FORMAT} {date_min} y {date_max}\033[0;0m"
         elif (r_date == False and date_max_null):
-            return False, f"{cs.INVALID_DATE_FORMAT} {date_min}"
+            return False, f"\033[1;33m{cs.INVALID_DATE_FORMAT} {date_min}\033[0;0m"
 
         if (result and r_date):
 
@@ -234,9 +234,9 @@ class Functions():
                 return True, df
                 #return True, df.iloc[:, :-1] # Elimino la ultima lista de la tabla.
             else:
-                return False, f"{cs.MAC_AP_NOT_FOUND} {mac_ap}"
+                return False, f"\033[1;31m{cs.MAC_AP_NOT_FOUND} {mac_ap}\033[0;0m"
         else:
-            return False, f"{cs.INVALID_MAC_AP_FORMAT} {mac_ap}"
+            return False, f"\033[1;33m{cs.INVALID_MAC_AP_FORMAT} {mac_ap}\033[0;0m"
 
     def verify_traffic(self, user_id, df):
         """Verificamos el trafico de subida y bajada de un usuario, expresado en Mb.

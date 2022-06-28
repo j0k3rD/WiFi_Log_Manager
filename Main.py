@@ -25,7 +25,10 @@ class Main():
         df = func.readCsv()
 
         while True:
-            print(cs.MENU) #Mostrar el menu.
+
+            print(f'\033[1;36m{cs.LOGO}\033[0;0m')
+            print(f'\033[3;36m{cs.MENU}\033[0;0m') #Mostrar el menu.
+
             opc = input(cs.ANSWER) #Mostrar opciones.
 
             # Solucionar error que el usuario ingrese un string o vacio al realizar una consulta.
@@ -39,7 +42,7 @@ class Main():
             if opc == 1:  
 
                 print(cs.SPACE)
-
+                
                 id = input(cs.QUESTION_ID)
 
                 print(cs.SPACE)
@@ -66,7 +69,7 @@ class Main():
 
                 if r_user_ID == None:
                     print(cs.SPACE)
-                    print(f"{cs.INVALID_ID_FORMAT} {id}")
+                    print(f"\033[1;31m{cs.INVALID_ID_FORMAT} {id}\033[0;0m")
                     print(cs.SPACE)
                     input(cs.PRESS_TO_CONTINUE)
                     continue
@@ -166,7 +169,7 @@ class Main():
 
                 if r_mac_ap == None:
                     print(cs.SPACE)
-                    print(f"{cs.INVALID_MAC_AP_FORMAT} {mac}")
+                    print(f"\033[1;31m{cs.INVALID_MAC_AP_FORMAT} {mac}\033[0;0m")
                     print(cs.SPACE)
                     input(cs.PRESS_TO_CONTINUE)
                     continue
