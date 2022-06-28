@@ -6,7 +6,7 @@
 <br>
            
 <h2>Description</h2>
-<p>WiFi Log Manager is a tool to manage a WiFi network through a log file that can be given in Excel or CSV.</p>
+<p>WiFi Log Manager is a tool to manage a WiFi network through a log file that can be given in Excel or CSV format.</p>
 
 There are 8 options:
 1. **User Session List**
