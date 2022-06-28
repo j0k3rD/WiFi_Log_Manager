@@ -35,6 +35,9 @@ There are 8 options:
 <br>
 
 <h2>Installation</h2>
+
+(You need to have **python3 installed**)
+
 <h3>Install via:</h3>
 
 ```
