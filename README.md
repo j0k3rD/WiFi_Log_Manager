@@ -19,7 +19,11 @@
 5. **All User MACs**
 <br>Show all the User's MAC.
 6. **User Connected by AP**
-<br>List users connected to an AP, using the AP's MAC.
+<br>List users connected to an AP, using the AP's MAC in a given date range.
+7. **User Traffic**
+<br>Show the User Download and Upload Traffic (bytes, megabytes, gigabytes).
+8. **LIST AP (Ordered by Total Traffic)**
+<br>List APs sorted by total traffic.
 
 <h4>Supported Platforms:</h4>
 
