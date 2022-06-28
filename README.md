@@ -53,6 +53,7 @@ cd WiFi_Log_Manager
 ```
 git clone https://github.com/j0k3rD/WiFi_Log_Manager 
 cd WiFi_Log_Manager
+**Move your Excel or CSV file to the Directory**
 ./install.sh
 ./boot.sh
 ```
