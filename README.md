@@ -35,7 +35,7 @@ There are 8 options:
 <br>
 
 <h2>Installation</h2>
-<h3>Install via requirements.txt</h3>
+<h3>Install via:</h3>
 
 ```
 cd WiFi_Log_Manager
