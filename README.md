@@ -8,7 +8,18 @@
 <p>WiFi Log Manager is a tool to manage a WiFi network through a log file that can be given in Excel or CSV.</p>
 
 - There are 8 options:
-1. 
+1. **User Session List**
+<br>Lists all sessions the user has had.
+2. **User Session List by Date**
+<br>Lists all sessions the user has had on a specified date (date range is allowed).
+3. **Total User Session Time**
+<br>Shows the total session time of a user in HH:MM:SS format.
+4. **User MAC**
+<br>Show the User's MAC.
+5. **All User MACs**
+<br>Show all the User's MAC.
+6. **User Connected by AP**
+<br>List users connected to an AP, using the AP's MAC.
 
 <h4>Supported Platforms:</h4>
 
