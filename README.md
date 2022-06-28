@@ -28,7 +28,7 @@ python3 setup.py
 <h4>Linux</h4>
 
 ```
-git clone https://github.com/j0k3rD/Wifi_Log_Manager 
+git clone https://github.com/j0k3rD/WiFi_Log_Manager 
 cd WiFi_Log_Manager
 pip3 install requirements.txt
 python3 setup.py
