@@ -5,23 +5,25 @@ NULLVALUES = "\\N" #Doble \\ porque python se autodetona!
 
 #-- Constants de Main Menu --#
 
-MENU = """
-                    --------------------------------------
-                            🔧 WiFi Log Manager 🔧
-                    --------------------------------------
+LOGO = """
+                --------------------------------------
+                        🔧 WiFi Log Manager 🔧
+                --------------------------------------
+        """
 
-                    Select an Option:
+MENU =  """
+                Select an Option:
 
-                    1. User Session List.
-                    2. User Session List by Date.
-                    3. Total User Session Time.
-                    4. User MAC.
-                    5. All User MACs.
-                    6. User conected by AP.
-                    7. User Traffic.
-                    8. List AP (Ordered by Total Traffic).
-                    9. Exit
-                    """
+                1. User Session List.
+                2. User Session List by Date.
+                3. Total User Session Time.
+                4. User MAC.
+                5. All User MACs.
+                6. User conected by AP.
+                7. User Traffic.
+                8. List AP (Ordered by Total Traffic).
+                9. Exit
+        """
 
 CHOOSE_DATE = """
                 .To search by "Exact Date": Enter 1.
