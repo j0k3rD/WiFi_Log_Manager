@@ -32,6 +32,8 @@
 - Windows (Experimental)
 - MacOS (Experimental)
 
+<br>
+
 <h2>Installation</h2>
 <h3>Install via requirements.txt</h3>
 
