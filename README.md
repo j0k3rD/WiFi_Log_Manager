@@ -1,4 +1,4 @@
-# WiFi Log Manager
+<h1 align="center">🔧WiFi Log Manager🔧</h1>
 - Copyright ©️ 2022
 - Authors: Marcos Milglierina (XxRaXoRxX),
            Aaron Moya (j0k3rD)
