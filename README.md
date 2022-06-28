@@ -6,7 +6,7 @@
 <br>
            
 <h2>Description</h2>
-<p>WiFi Log Manager is a tool to manage a WiFi network through a log file that can be given in Excel or CSV.</p>
+<p>WiFi Log Manager is a tool to manage a WiFi network through a log file that can be given in Excel or CSV format.</p>
 
 There are 8 options:
 1. **User Session List**
@@ -40,9 +40,9 @@ There are 8 options:
 
 <h3>Install via:</h3>
 
-```
+```bash
 cd WiFi_Log_Manager
-**Move your Excel or CSV file to the Directory**
+#**Move your Excel or CSV file to the Directory**
 ./install.sh
 ./boot.sh
 ```
@@ -50,9 +50,10 @@ cd WiFi_Log_Manager
 <h3>Installation</h3>
 <h4>Linux</h4>
 
-```
+```bash
 git clone https://github.com/j0k3rD/WiFi_Log_Manager 
 cd WiFi_Log_Manager
+#**Move your Excel or CSV file to the Directory**
 ./install.sh
 ./boot.sh
 ```
