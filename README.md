@@ -42,7 +42,7 @@ There are 8 options:
 
 ```bash
 cd WiFi_Log_Manager
-**Move your Excel or CSV file to the Directory**
+#Move your Excel or CSV file to the Directory
 ./install.sh
 ./boot.sh
 ```
@@ -53,7 +53,7 @@ cd WiFi_Log_Manager
 ```bash
 git clone https://github.com/j0k3rD/WiFi_Log_Manager 
 cd WiFi_Log_Manager
-**Move your Excel or CSV file to the Directory**
+#Move your Excel or CSV file to the Directory**
 ./install.sh
 ./boot.sh
 ```
