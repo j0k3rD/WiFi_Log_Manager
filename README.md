@@ -53,4 +53,4 @@ python3 setup.py
 ```
 <br>
 <h3>Bugs and enhancements</h3>
-For bug reports or enhancements, please open an issue here.
+For bug reports or enhancements, please open an issue :).
