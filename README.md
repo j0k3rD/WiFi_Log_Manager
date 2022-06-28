@@ -38,8 +38,9 @@ There are 8 options:
 <h3>Install via requirements.txt</h3>
 
 ```
-pip3 install requirements.txt
-python3 setup.py
+cd WiFi_Log_Manager
+./install.sh
+./boot.sh
 ```
 
 <h3>Installation</h3>
@@ -48,8 +49,8 @@ python3 setup.py
 ```
 git clone https://github.com/j0k3rD/WiFi_Log_Manager 
 cd WiFi_Log_Manager
-pip3 install requirements.txt
-python3 setup.py
+./install.sh
+./boot.sh
 ```
 <br>
 <h3>Bugs and enhancements</h3>
