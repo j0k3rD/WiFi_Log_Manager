@@ -42,6 +42,7 @@ There are 8 options:
 
 ```
 cd WiFi_Log_Manager
+**Move your Excel or CSV file to the Directory**
 ./install.sh
 ./boot.sh
 ```
