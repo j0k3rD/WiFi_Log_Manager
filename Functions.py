@@ -7,7 +7,6 @@ import numpy as np
 from datetime import datetime, timedelta
 
 class Functions():
-
     def readCsv(self):
         """Lee el archivo .csv dentro de la carpeta.  
             -return:s
@@ -21,6 +20,7 @@ class Functions():
         archive[cs.DF_INICIO] = pd.to_datetime(archive[cs.DF_INICIO], format = '%d/%m/%Y %H:%M')
         return archive
         
+
     def verify_userID(self, user_id, df):
         """Verifica el user ID y busca las sesiones en un DataFrame.
             - args:
@@ -39,6 +39,7 @@ class Functions():
                 return False, f"\033[1;31m{cs.NAME_NOT_FOUND} {user_id}\033[0;0m"
         else:
             return False, f"\033[1;33m{cs.INVALID_ID_FORMAT} {user_id}\033[0;0m"
+
 
     def show_user(self, user_id, df):
         """Verifica el user ID y busca las sesiones en un DataFrame.
