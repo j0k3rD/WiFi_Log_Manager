@@ -1,6 +1,4 @@
 #-- Funciones para busquedas --#
-from ast import For
-from audioop import reverse
 import re
 import Constants as cs
 import numpy as py
