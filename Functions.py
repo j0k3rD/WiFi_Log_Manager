@@ -1,7 +1,6 @@
 #-- Funciones para busquedas --#
 import re
 import Constants as cs
-import numpy as py
 import pandas as pd
 from natsort import index_natsorted
 import numpy as np
