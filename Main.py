@@ -68,7 +68,6 @@ class Main():
                 r_user_ID = func.get_regex_validation(regex = cs.REGEX_ID, value = id)
 
                 if r_user_ID == None:
-                    print(cs.SPACE)
                     print(f"\033[1;31m{cs.INVALID_ID_FORMAT} {id}\033[0;0m")
                     print(cs.SPACE)
                     input(cs.PRESS_TO_CONTINUE)
@@ -78,14 +77,14 @@ class Main():
                 print(cs.SPACE)
 
                 if op == "1":
-                    date = input(f"{cs.DATE_FORMAT}\n{cs.QUESTION_FECHA}")
+                    date = input(f"\033[3m{cs.DATE_FORMAT}\033[0;0m\n{cs.QUESTION_FECHA}")
                     print(cs.SPACE)
                     user = func.user_session_by_date(user_id = id, date_min = date, df = df)
 
                 elif op == "2":
-                    date_min = input(f"{cs.DATE_FORMAT}\n{cs.QUESTION_FECHA_MIN}")
+                    date_min = input(f"\033[3m{cs.DATE_FORMAT}\033[0;0m\n{cs.QUESTION_FECHA_MIN}")
                     print(cs.SPACE)
-                    date_max = input(f"{cs.DATE_FORMAT}\n{cs.QUESTION_FECHA_MAX}")
+                    date_max = input(f"\033[3m{cs.DATE_FORMAT}\033[0;0m\n{cs.QUESTION_FECHA_MAX}")
                     print(cs.SPACE)
                     user = func.user_session_by_date(user_id = id, date_min = date_min, date_max = date_max, df = df)
 
@@ -110,11 +109,14 @@ class Main():
 
                 time = func.user_sessionTime(user_id = id, df = df)
 
+                print(cs.SPACE)
+
                 if (time[0] == True):
                     print(f"\n'{id}' {cs.TOTAL_SESSION_TIME} {time[1]}\n")
                 else:
                     print(time[1])
 
+                print(cs.SPACE)
                 input(cs.PRESS_TO_CONTINUE)
 
             #Listar la MAC de un usuario si se conecto con un dispositivo o varios.
@@ -122,7 +124,7 @@ class Main():
 
                 print(cs.SPACE)
 
-                mac = input(f"{cs.MAC_FORMAT}\n{cs.QUESTION_MAC_CLIENT}")
+                mac = input(f"\033[3m{cs.MAC_FORMAT}\033[0;0m\n{cs.QUESTION_MAC_CLIENT}")
 
                 print(cs.SPACE)
 
@@ -163,12 +165,11 @@ class Main():
 
                 print(cs.SPACE)
 
-                mac = input(f"{cs.MAC_AP_FORMAT}\n{cs.QUESTION_MAC_AP}")
+                mac = input(f"\033[3m{cs.MAC_AP_FORMAT}\033[0;0m\n{cs.QUESTION_MAC_AP}")
                 print(cs.SPACE)
                 r_mac_ap = func.get_regex_validation(regex = cs.REGEX_MACAP, value = mac)
 
                 if r_mac_ap == None:
-                    print(cs.SPACE)
                     print(f"\033[1;31m{cs.INVALID_MAC_AP_FORMAT} {mac}\033[0;0m")
                     print(cs.SPACE)
                     input(cs.PRESS_TO_CONTINUE)
@@ -178,14 +179,14 @@ class Main():
                 print(cs.SPACE)
 
                 if op == "1":
-                    date = input(f"{cs.DATE_FORMAT}\n{cs.QUESTION_FECHA}")
+                    date = input(f"\033[3m{cs.DATE_FORMAT}\033[0;0m\n{cs.QUESTION_FECHA}")
                     print(cs.SPACE)
                     table = func.verify_mac_ap(mac_ap = mac, date_min = date , df = df)
 
                 elif op == "2":
-                    date_min = input(f"{cs.DATE_FORMAT}\n{cs.QUESTION_FECHA_MIN}")
+                    date_min = input(f"\033[3m{cs.DATE_FORMAT}\033[0;0m\n{cs.QUESTION_FECHA_MIN}")
                     print(cs.SPACE)
-                    date_max = input(f"{cs.DATE_FORMAT}\n{cs.QUESTION_FECHA_MAX}")
+                    date_max = input(f"\033[3m{cs.DATE_FORMAT}\033[0;0m\n{cs.QUESTION_FECHA_MAX}")
                     print(cs.SPACE)
                     table = func.verify_mac_ap(mac_ap = mac, date_min = date_min, date_max = date_max, df = df)
 

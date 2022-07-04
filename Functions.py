@@ -31,7 +31,7 @@ class Functions():
                 - df: DataFrame obtenido con el Pandas.
             - return: Retorna la lista encontrada, sino id invalido."""
         
-        # Verifico si la MAC ingresada es correcta.
+        # Verifico si el USERID ingresado es correcto.
         result = self.__regexValidation(regex = cs.REGEX_ID, value = user_id)
 
         if result:
@@ -64,7 +64,6 @@ class Functions():
         df.pop(cs.DF_INPUT_OCTECTS)
 
         return True, df.reset_index(drop = True)
-
 
 
     def user_session_by_date(self, user_id, date_min, df, date_max = None):
@@ -115,6 +114,7 @@ class Functions():
         else:
             return False, f"\033[1;33m{cs.INVALID_DATE_FORMAT} {date_min} or {date_max}\033[0;0m"
 
+
     def user_sessionTime(self, user_id, df):
         """Verifica el user ID y muestra el tiempo total de sesiones en el DataFrame.
             - args:
@@ -135,6 +135,7 @@ class Functions():
         total = df[cs.DF_SESSION_TIME].sum()
         return True, timedelta(seconds = total)
                 
+
     def verify_mac(self, mac, df):
         """Verifica cantidad de veces utilizado la MAC en el DataFrame.
             - args:
@@ -160,6 +161,7 @@ class Functions():
         else:
             return False, f"\033[1;33m{cs.INVALID_MAC_FORMAT} {mac}\033[0;0m"
 
+
     def users_macs(self, user_id, df):
         """Verifica la cantidad de MACs que utiliza un usuario en el DataFrame.
             - args:
@@ -180,6 +182,7 @@ class Functions():
         df = df.groupby(by = [cs.DF_MAC]).size().reset_index(name = cs.REPEAT_CONNECTIONS)
         return True, df
         #return True, new_df.iloc[:, :-1] # Elimino la ultima lista de la tabla.
+
 
     def verify_mac_ap(self, mac_ap, date_min, df, date_max = None):
         """Vericamos usuarios conectados a una MAC de un AP por rango de fechas.
@@ -238,6 +241,7 @@ class Functions():
         else:
             return False, f"\033[1;33m{cs.INVALID_MAC_AP_FORMAT} {mac_ap}\033[0;0m"
 
+
     def verify_traffic(self, user_id, df):
         """Verificamos el trafico de subida y bajada de un usuario, expresado en Mb.
             - args:
@@ -263,6 +267,7 @@ class Functions():
         upload = self.__bytesTransform(bytes = upload)
 
         return True, f"{cs.USER} '{user_id}' {cs.HAS}\n{cs.UPLOAD} {upload}\n{cs.DOWNLOAD} {download}"
+
 
     def verify_ap_traffic(self, df):
         """Mostramos los AP ordenados por trafico total.
@@ -302,6 +307,7 @@ class Functions():
         df['Tráfico_Total'] = df['Tráfico_Total'].apply(lambda x: self.__bytesTransform(x))
 
         return df.reset_index(drop = True)
+
 
     #-- Utilities --#
     def __regexValidation(self, regex, value):
